@@ -212,6 +212,9 @@ matrix:
     # The log level for the synapse server
     synapseLogLevel: WARNING
 
+  # Annotations to configmap for homeserver.yaml and log.config
+  # configMapAnnotations: {}
+
 # Persistent volumes configuration
 volumes:
   # Uploaded attachments/multimedia
