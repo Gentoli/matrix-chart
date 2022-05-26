@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   name: {{ include "matrix.fullname" . }}-synapse
   labels:
@@ -11,8 +11,6 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "matrix.name" . }}-synapse
       app.kubernetes.io/instance: {{ .Release.Name }}
-  strategy:
-    type: Recreate
   template:
     metadata:
       annotations:
